@@ -22,6 +22,9 @@ void setup() {
 
 ArrayList<PVector> pVectors;
 
+PVector v1 = tracker.getPos();
+PVector v2 = tracker.getLerpedPos();
+
 void draw() {
   background(0);
 
@@ -29,13 +32,19 @@ void draw() {
   tracker.track();
 
    
-    PVector v1 = tracker.getPos();
-    PVector v2 = tracker.getLerpedPos();
+   
     
+    beginShape();  
+    stroke(255);
+    curveVertex(v1.x, v1.y);
+    curveVertex(v1.x, v1.y);//1st point is also control point
+    curveVertex(v2.x, v2.y);
+    curveVertex(v2.x, v2.y);// the last point is also 2nd control point
+    endShape();
     
     ///WE ADDED THIS
-    stroke(255);
-    line(v1.x, v1.y, v2.x, v2.y);
+    //stroke(255);
+    //line(v1.x, v1.y, v2.x, v2.y);
 
   // Display some info
   int t = tracker.getThreshold();
