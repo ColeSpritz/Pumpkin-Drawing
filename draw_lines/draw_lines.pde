@@ -12,39 +12,24 @@ import java.util.*;
 // The kinect stuff is happening in another class
 KinectTracker tracker;
 Kinect kinect;
-
+ArrayList<PVector> pVectors;
 
 void setup() {
   size(640, 520);
   kinect = new Kinect(this);
   tracker = new KinectTracker();
+  background(255);
 }
 
-ArrayList<PVector> pVectors;
-
 void draw() {
-  background(0);
-
-  // Run the tracking analysis
   tracker.track();
 
- try {
-   
-    PVector v1 = tracker.getPos();
-    PVector v2 = tracker.getLerpedPos();
+  PVector v1 = tracker.getPos();
+  PVector v2 = tracker.getLerpedPos();
     
-    //if (v1 != null && v2 != null) {
-      pVectors.add(v1);
-      pVectors.add(v2);
-
-    
-    ///WE ADDED THIS
-      stroke(255);
-      for (int i = 0; i < pVectors.size(); i++) {
-        line(pVectors.get(i).x, pVectors.get(i).y, pVectors.get(i+1).x, pVectors.get(i+1).y);
-      }
-    } catch (NullPointerException e) {
-    }
+  ///WE ADDED THIS
+  stroke(255, 0, 0);
+  line(v1.x, v1.y, v2.x, v2.y);
 
   // Display some info
   int t = tracker.getThreshold();
