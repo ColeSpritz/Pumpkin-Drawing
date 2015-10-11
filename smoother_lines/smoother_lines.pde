@@ -1,10 +1,3 @@
-// Daniel Shiffman
-// Tracking the average location beyond a given depth threshold
-// Thanks to Dan O'Sullivan
-
-// https://github.com/shiffman/OpenKinect-for-Processing
-// http://shiffman.net/p5/kinect/
-
 import org.openkinect.freenect.*;
 import org.openkinect.processing.*;
 import java.util.*;
@@ -13,38 +6,26 @@ import java.util.*;
 KinectTracker tracker;
 Kinect kinect;
 
-
 void setup() {
   size(640, 520);
   kinect = new Kinect(this);
   tracker = new KinectTracker();
+  background(255);
 }
 
-ArrayList<PVector> pVectors;
-
-PVector v1 = tracker.getPos();
-PVector v2 = tracker.getLerpedPos();
+ArrayList<Line> lines;
 
 void draw() {
-  background(0);
-
-  // Run the tracking analysis
   tracker.track();
 
-   
-   
+  PVector v1 = tracker.getPos();
+  PVector v2 = tracker.getPrevPos();
+
+  Line newLine = new Line(v1, v2);
+  newLine.drawLine();
     
-    beginShape();  
-    stroke(255);
-    curveVertex(v1.x, v1.y);
-    curveVertex(v1.x, v1.y);//1st point is also control point
-    curveVertex(v2.x, v2.y);
-    curveVertex(v2.x, v2.y);// the last point is also 2nd control point
-    endShape();
-    
-    ///WE ADDED THIS
-    //stroke(255);
-    //line(v1.x, v1.y, v2.x, v2.y);
+  ///WE ADDED THIS
+  
 
   // Display some info
   int t = tracker.getThreshold();

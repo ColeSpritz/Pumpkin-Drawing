@@ -12,7 +12,10 @@ import java.util.*;
 // The kinect stuff is happening in another class
 KinectTracker tracker;
 Kinect kinect;
+<<<<<<< HEAD
+=======
 
+>>>>>>> 5c3eea97efcf1adaaf9e4816641a145b308f44b6
 
 void setup() {
   size(640, 520);
