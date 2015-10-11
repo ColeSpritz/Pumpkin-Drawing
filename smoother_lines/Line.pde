@@ -1,3 +1,5 @@
+//Unnecessary right now, but maybe useful later.
+
 class Line {
   float x1;
   float y1;

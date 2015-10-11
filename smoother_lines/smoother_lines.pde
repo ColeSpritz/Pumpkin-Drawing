@@ -13,19 +13,13 @@ void setup() {
   background(255);
 }
 
-ArrayList<Line> lines;
-
 void draw() {
   tracker.track();
 
   PVector v1 = tracker.getPos();
   PVector v2 = tracker.getPrevPos();
 
-  Line newLine = new Line(v1, v2);
-  newLine.drawLine();
-    
-  ///WE ADDED THIS
-  
+  line(v1.x, v1.y, v2.x, v2.y);
 
   // Display some info
   int t = tracker.getThreshold();
