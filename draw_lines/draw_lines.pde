@@ -12,7 +12,6 @@ import java.util.*;
 // The kinect stuff is happening in another class
 KinectTracker tracker;
 Kinect kinect;
-ArrayList<PVector> pVectors;
 
 void setup() {
   size(640, 520);

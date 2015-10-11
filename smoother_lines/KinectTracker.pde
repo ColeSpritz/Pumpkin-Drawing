@@ -12,6 +12,9 @@ class KinectTracker {
 
   // Raw location
   PVector loc;
+  
+  // Previous location
+  PVector prevLoc;
 
   // Interpolated location
   PVector lerpedLoc;
@@ -62,6 +65,7 @@ class KinectTracker {
     }
     // As long as we found something
     if (count != 0) {
+      prevLoc = loc;
       loc = new PVector(sumX/count, sumY/count);
     }
 
@@ -76,6 +80,10 @@ class KinectTracker {
 
   PVector getPos() {
     return loc;
+  }
+  
+  PVector getPrevPos() {
+    return prevLoc;
   }
 
   void display() {
