@@ -33,7 +33,7 @@ class KinectTracker {
     // Make a blank image
     display = createImage(kinect.width, kinect.height, RGB);
     // Set up the vectors
-    loc = new PVector(320, 260);
+    loc = new PVector(320, 240);
     prevLoc = new PVector(320, 240);
     lerpedLoc = new PVector(320, 240);
   }

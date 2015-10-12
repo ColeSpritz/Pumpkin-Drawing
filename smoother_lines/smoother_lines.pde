@@ -36,7 +36,10 @@ void draw() {
     save(filename);
     count++;
     background(pumpkin);
+    delay(500);
   } else {
+    stroke(255, 255, 0);
+    strokeWeight(7);
     line(v1.x, v1.y, v2.x, v2.y);
   }
 }
