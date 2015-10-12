@@ -8,7 +8,7 @@
 class KinectTracker {
 
   // Depth threshold
-  int threshold = 745;
+  int threshold = 700;
 
   // Raw location
   PVector loc;
@@ -33,9 +33,9 @@ class KinectTracker {
     // Make a blank image
     display = createImage(kinect.width, kinect.height, RGB);
     // Set up the vectors
-    loc = new PVector(320, 260);
-    prevLoc = new PVector(320, 260);
-    lerpedLoc = new PVector(320, 260);
+    loc = new PVector(320, 240);
+    prevLoc = new PVector(320, 240);
+    lerpedLoc = new PVector(320, 240);
   }
 
   void track() {
