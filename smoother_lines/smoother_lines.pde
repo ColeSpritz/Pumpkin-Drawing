@@ -37,7 +37,7 @@ void draw() {
     count++;
     background(pumpkin);
     delay(500);
-  } else {
+  } else if (PVector.dist(v1,v2) < 20) {
     stroke(255, 255, 0);
     strokeWeight(7);
     line(v1.x, v1.y, v2.x, v2.y);
