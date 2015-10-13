@@ -44,11 +44,16 @@ void draw() {
     count++;
     background(pumpkin);
     delay(500);
-  } else if (withinPumpkin(v1) && PVector.dist(v1,v2) < 20) {
+  } else if (!withinPumpkin(v1)) {
+    noFill();
+    stroke(0);
+    strokeWeight(1);
+    ellipse(v1.x, v1.y, 5, 5);
+  } else if (PVector.dist(v1,v2) < 40) {
     stroke(255, 255, 0);
     strokeWeight(7);
     line(v1.x, v1.y, v2.x, v2.y);
-  }
+  } 
 }
 
 // Adjust the threshold with key presses
