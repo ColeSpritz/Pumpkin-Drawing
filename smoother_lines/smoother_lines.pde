@@ -26,8 +26,8 @@ void draw() {
   beginShape();
     vertex(580, 0);
     vertex(640, 0);
-    vertex(640, 20);
-    vertex(580, 20);
+    vertex(640, 60);
+    vertex(580, 60);
   endShape(CLOSE);
   
   //Estimation of pumpkin dimensions:
@@ -38,7 +38,7 @@ void draw() {
   PVector v1 = tracker.getPos();
   PVector v2 = tracker.getPrevPos();
   
-  if ((v1.x > 580) && (v1.y < 20)) {
+  if ((v1.x > 580) && (v1.y < 60)) {
     String filename = "pumpkin-"+count+".jpg";
     save(filename);
     count++;
