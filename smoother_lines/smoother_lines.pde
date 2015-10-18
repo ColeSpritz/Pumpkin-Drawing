@@ -11,6 +11,8 @@ int count;
 boolean drawMode;
 
 boolean withinPumpkin(PVector point) {
+  //Estimation of pumpkin dimensions:
+  //ellipse(285, 280, 390, 375);
   return (pow((point.x-285),2)/pow(195,2)) + (pow((point.y-280),2)/pow(187.5,2)) <= 1;
 }
 
@@ -25,20 +27,8 @@ void setup() {
   count = 1;
 }
 
-void draw() {
-  //DONE button
-  beginShape();
-    vertex(580, 0);
-    vertex(640, 0);
-    vertex(640, 60);
-    vertex(580, 60);
-  endShape(CLOSE);
-  
-  //Estimation of pumpkin dimensions:
-  //ellipse(285, 280, 390, 375);
-  
+void draw() {  
   tracker.track();
-
   PVector v1 = tracker.getPos();
   PVector v2 = tracker.getPrevPos();
   
@@ -49,7 +39,6 @@ void draw() {
       count++;
       drawMode = false;
       background(startScreen);
-      //delay(500);
     } else if (!withinPumpkin(v1)) {
       noFill();
       stroke(0);
