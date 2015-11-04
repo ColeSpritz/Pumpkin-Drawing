@@ -23,6 +23,7 @@ This software allows users to "carve" pumpkins using gestures tracked by an Xbox
   - https://github.com/shiffman/OpenKinect-for-Processing
   - http://shiffman.net/p5/kinect/
 * Xbox Kinect
+* Blender
 
 ### Legal
 
