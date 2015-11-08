@@ -6,13 +6,13 @@
 
 ## Description
 
-This software allows users to "carve" pumpkins using gestures tracked by an Xbox Kinect. 
+This software allows users to "carve" pumpkins using gestures tracked by an Xbox Kinect.
 
 ## Setup
 
 * Make sure you have Processing installed on your computer (https://processing.org/download/) and a Kinect plugged in.
 * Clone this repository.
-* Within the smoother_lines folder, open the smoother_lines.pde file in Processing.
+* Within the carve folder, open the carve.pde file in Processing.
 * Press the Play button and stand a couple feet away from the Kinect (adjust your distance as necessary).
 * Carve away!
 
