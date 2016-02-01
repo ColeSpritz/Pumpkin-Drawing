@@ -16,7 +16,7 @@ boolean withinPumpkin(PVector point) {
 }
 
 void setup() {
-  size(640, 480);
+  //size(640, 480);
   fullScreen();
   kinect = new Kinect(this);
   tracker = new KinectTracker();
