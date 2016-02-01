@@ -10,20 +10,18 @@ This software allows users to "carve" pumpkins using gestures tracked by an Xbox
 
 ## Setup
 
-* Make sure you have Processing installed on your computer (https://processing.org/download/) and a Kinect plugged in.
+* Make sure you have [Processing](https://processing.org/download/) installed on your computer and a Kinect plugged in.
 * Clone this repository.
-* Within the carve folder, open the carve.pde file in Processing.
+* Within the *carve* folder, open the *carve.pde* file in Processing.
 * Press the Play button and stand a couple feet away from the Kinect (adjust your distance as necessary).
 * Carve away!
 
 ## Technologies Used
 
-* Processing (Java)
-* OpenKinect (thanks to Daniel Shiffman)
-  - https://github.com/shiffman/OpenKinect-for-Processing
-  - http://shiffman.net/p5/kinect/
+* [Processing](https://processing.org/) (Java)
+* [OpenKinect](https://github.com/shiffman/OpenKinect-for-Processing) (thanks to [Daniel Shiffman](http://shiffman.net/p5/kinect/))
 * Xbox Kinect
-* Blender
+* [Blender](https://www.blender.org/)
 
 ### Legal
 
