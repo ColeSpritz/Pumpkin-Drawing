@@ -2,7 +2,6 @@ import org.openkinect.freenect.*;
 import org.openkinect.processing.*;
 import java.util.*;
 
-// The kinect stuff is happening in another class
 KinectTracker tracker;
 Kinect kinect;
 PImage startScreen;
@@ -18,6 +17,7 @@ boolean withinPumpkin(PVector point) {
 
 void setup() {
   size(640, 480);
+  fullScreen();
   kinect = new Kinect(this);
   tracker = new KinectTracker();
   startScreen = loadImage("instructions.jpg");
