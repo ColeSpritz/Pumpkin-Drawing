@@ -12,7 +12,7 @@ boolean drawMode;
 boolean withinPumpkin(PVector point) {
   //Estimation of pumpkin dimensions:
   //ellipse(285, 280, 390, 375);
-  return (pow((point.x-285),2)/pow(195,2)) + (pow((point.y-280),2)/pow(187.5,2)) <= 1;
+  return (pow((point.x - 285), 2) / pow(195, 2)) + (pow((point.y - 280), 2) / pow(187.5, 2)) <= 1;
 }
 
 void setup() {
@@ -34,7 +34,7 @@ void draw() {
   
   if (drawMode) {
     if ((v1.x > 580) && (v1.y < 60)) {
-      String filename = "pumpkin-"+count+".jpg";
+      String filename = "pumpkin-" + count + ".jpg";
       save(filename);
       count++;
       drawMode = false;
@@ -66,10 +66,10 @@ void keyPressed() {
   int t = tracker.getThreshold();
   if (key == CODED) {
     if (keyCode == UP) {
-      t+=5;
+      t += 5;
       tracker.setThreshold(t);
     } else if (keyCode == DOWN) {
-      t-=5;
+      t -= 5;
       tracker.setThreshold(t);
     }
   }
