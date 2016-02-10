@@ -16,7 +16,7 @@ boolean withinPumpkin(PVector point) {
 }
 
 void setup() {
-  //size(640, 480);
+  //Please Note: Attached display must have a resolution of 640x480 to work!
   fullScreen();
   kinect = new Kinect(this);
   tracker = new KinectTracker();
